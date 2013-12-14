@@ -1,0 +1,64 @@
+package com.example.monografiassh2013;
+
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.app.Activity;
+import android.content.Intent;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		//TODO: Verificar se acontece erro
+		//Encontrando o botão dentro do layout activity_main
+		Button botaoNovo = (Button) findViewById(R.id.btn_novo);
+		//Definindo funcionalidade para o botão
+		botaoNovo.setOnClickListener( ListenerBotaoNovo());
+		
+		Button botaoConectar = (Button) findViewById(R.id.btn_conectar);
+		botaoConectar.setOnClickListener( ListenerBotaoConectar());
+		
+		//Gerar lista de botões com os perfis de servidores salvos 
+		Button botaoExemplo = (Button) findViewById(R.id.btn_exemplo);
+		
+		//TODO: Acessar a tela de conectar enviando sobrecarga para carregar os dados
+		//do servidor do perfil salvo
+		botaoExemplo.setOnClickListener( ListenerBotaoConectar());
+	}
+	
+	/**
+	 * 
+	 * @return retorna um CliclListener para o Botão NovoPerfil
+	 */
+	private View.OnClickListener ListenerBotaoNovo(){
+		
+		return new View.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getApplicationContext(),NovoPerfilActivity.class);
+                startActivity(i);
+
+			}
+			
+		};
+	}
+private View.OnClickListener ListenerBotaoConectar(){
+		
+		return new View.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getApplicationContext(),ConexaoDiretaActivity.class);
+                startActivity(i);
+
+			}
+			
+		};
+	}
+
+}

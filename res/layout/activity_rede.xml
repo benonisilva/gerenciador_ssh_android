@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".RedeActivity" >
+
+    <TextView
+        android:id="@+id/txt_rede_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rede"
+        android:textAppearance="?android:attr/textAppearanceLarge"  />
+	<TextView
+        android:id="@+id/txt_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Conexão Ativa"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+	<TextView
+        android:id="@+id/txt_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: 19,23 KB"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+	<TextView
+        android:id="@+id/txt_recebido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recebido: 5,23 KB"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+	<TextView
+        android:id="@+id/txt_enviado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviado: 14,00 KB"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+	<TextView
+        android:id="@+id/txt_duracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duração: 00:04:01"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+	<TextView
+        android:id="@+id/txt_pt_acesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pt. Acesso: vivo.com.br"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+	
+	 <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista" />  
+    
+
+</LinearLayout>

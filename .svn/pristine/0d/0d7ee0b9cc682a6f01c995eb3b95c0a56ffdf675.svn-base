@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.monografiassh2013"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.monografiassh2013.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.NovoPerfilActivity"
+            android:label="@string/title_activity_novo_perfil" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.OpcoesActivity"
+            android:label="@string/title_activity_opcoes" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.ConexaoDiretaActivity"
+            android:label="@string/title_activity_conexao_direta" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.ProcessosActivity"
+            android:label="@string/title_activity_processos" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.RedeActivity"
+            android:label="@string/title_activity_rede" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.UsuariosActivity"
+            android:label="@string/title_activity_usuarios" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.SOActivity"
+            android:label="@string/title_activity_so" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.HardwareActivity"
+            android:label="@string/title_activity_hardware" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.MemoriaActivity"
+            android:label="@string/title_activity_memoria" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.DiscoActivity"
+            android:label="@string/title_activity_disco" >
+        </activity>
+        <activity
+            android:name="com.example.monografiassh2013.DesligarActivity"
+            android:label="@string/title_activity_desligar" >
+        </activity>
+    </application>
+
+</manifest>
