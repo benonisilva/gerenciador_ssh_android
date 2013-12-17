@@ -6,12 +6,14 @@ import com.example.monografiassh2013.conexao.SSHClienteConexao;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ConexaoDiretaActivity extends Activity {
     private ConfiguracaoConexao config;
@@ -58,7 +60,12 @@ private View.OnClickListener ListenerBotaoConectar(){
 			public void onClick(View v) {
 				
 				SSHClienteConexao s = new SSHClienteConexao();
-				boolean isOpen = s.conecta(config);
+				boolean isOpen=false;
+				try {
+					isOpen = s.conecta(config);
+				} catch (Exception e) {
+					_toastError(e.getMessage());
+				}
 				Log.i("conectado ?", isOpen+"");
 				if(isOpen) {
 					s.desconecta();
@@ -72,5 +79,13 @@ private View.OnClickListener ListenerBotaoConectar(){
 			
 		};
 	}
+    
+   private void _toastError(String s) {
+	Context context = getApplicationContext();
+	CharSequence text = s;
+	int duration = Toast.LENGTH_SHORT;
+	Toast toast = Toast.makeText(context, text, duration);
+	toast.show();
+}
 
 }

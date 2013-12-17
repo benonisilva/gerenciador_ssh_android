@@ -16,13 +16,13 @@ public class SSHClienteConexao {
 
 	final SSHClient ssh = new SSHClient(new AndroidConfig());
 	
-	public boolean conecta(ConfiguracaoConexao c) {
+	public boolean conecta(ConfiguracaoConexao c) throws Exception {
 		
 		
 		ssh.addHostKeyVerifier(new NullHostKeyVerifier());
 		boolean isOpen= false;
 		
-		try {
+		//try {
 		
     		ssh.connect(c.getHost(),c.getPorta());
             ssh.authPassword(c.getUsername(), c.getPassword().toCharArray());
@@ -35,10 +35,10 @@ public class SSHClienteConexao {
             session.close();
         	//ssh.disconnect();
 			
-		} catch (Exception e) {
-			Log.i("exception", e.getMessage());
+		//} catch (Exception e) {
+		//	Log.i("exception", e.getMessage());
 			
-		}
+		//}
 		return isOpen; 
 	}
 	

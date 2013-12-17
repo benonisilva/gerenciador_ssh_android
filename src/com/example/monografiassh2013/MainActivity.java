@@ -127,9 +127,17 @@ public class MainActivity extends ListActivity {
 			public void onClick(View v) {
 				
 				SSHClienteConexao s = new SSHClienteConexao();
-				s.conecta(config);
-				Intent i = new Intent(getApplicationContext(),ConexaoDiretaActivity.class);
-				startActivity(i);
+				try {
+					s.conecta(config);
+					Intent i = new Intent(getApplicationContext(),ConexaoDiretaActivity.class);
+					startActivity(i);
+				} catch (Exception e) {
+					
+					_toastError(e.getMessage());
+				}
+				finally {
+					s.desconecta();
+				}
 
 			}
 
@@ -158,14 +166,20 @@ public class MainActivity extends ListActivity {
 	
 	@Override
 	  protected void onResume() {
-	    datasource.open();
-	    super.onResume();
+		super.onResume();
+		datasource.open();
+	    values = datasource.getAllServidores();
+	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+		        android.R.layout.simple_list_item_1, _getNomesServidores(values));
+		    setListAdapter(adapter);
+	    
 	  }
 
 	  @Override
 	  protected void onPause() {
-	    datasource.close();
-	    super.onPause();
+		  super.onPause();
+		  datasource.close();
+	    
 	  }
 	
 	private List<String>_getNomesServidores(List<Servidor> s) {
@@ -182,6 +196,14 @@ public class MainActivity extends ListActivity {
 	private void _toastTeste(Servidor s) {
 		Context context = getApplicationContext();
 		CharSequence text = s.getId()+" ID";
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+	}
+	
+	private void _toastError(String s) {
+		Context context = getApplicationContext();
+		CharSequence text = s;
 		int duration = Toast.LENGTH_SHORT;
 		Toast toast = Toast.makeText(context, text, duration);
 		toast.show();

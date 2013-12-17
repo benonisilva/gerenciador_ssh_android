@@ -40,27 +40,26 @@ public final class R {
         public static final int etxt_porta=0x7f070004;
         public static final int etxt_senha=0x7f070003;
         public static final int etxt_usuario=0x7f070002;
-        public static final int exemplo_processo=0x7f07001b;
         public static final int linear_layout_btn=0x7f070011;
         public static final int scroll_lista_servidores=0x7f070010;
         public static final int titulo_main_text=0x7f07000f;
-        public static final int txt_Kerner=0x7f070022;
+        public static final int txt_Kerner=0x7f070021;
         public static final int txt_desligar_titulo=0x7f070006;
-        public static final int txt_duracao=0x7f070020;
-        public static final int txt_enviado=0x7f07001f;
+        public static final int txt_duracao=0x7f07001f;
+        public static final int txt_enviado=0x7f07001e;
         public static final int txt_hardware_titulo=0x7f07000c;
         public static final int txt_novo_perfil=0x7f070000;
         public static final int txt_opcoes=0x7f070014;
         public static final int txt_processos_titulo=0x7f07001a;
-        public static final int txt_pt_acesso=0x7f070021;
-        public static final int txt_recebido=0x7f07001e;
-        public static final int txt_rede_titulo=0x7f07001c;
+        public static final int txt_pt_acesso=0x7f070020;
+        public static final int txt_recebido=0x7f07001d;
+        public static final int txt_rede_titulo=0x7f07001b;
         public static final int txt_so_titulo=0x7f070009;
-        public static final int txt_status=0x7f07001d;
+        public static final int txt_status=0x7f07001c;
         public static final int txt_swap=0x7f07000b;
         public static final int txt_total=0x7f07000a;
-        public static final int txt_usuarios_titulo=0x7f070024;
-        public static final int txt_versao=0x7f070023;
+        public static final int txt_usuarios_titulo=0x7f070023;
+        public static final int txt_versao=0x7f070022;
     }
     public static final class layout {
         public static final int activity_conexao_direta=0x7f030000;

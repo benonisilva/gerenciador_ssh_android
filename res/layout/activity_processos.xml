@@ -20,12 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-
-        <Button
-            android:id="@+id/exemplo_processo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-        android:text="Root 361/USR/BIN/SYSTEM" />
         
          <ListView
         android:id="@android:id/list"

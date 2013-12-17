@@ -1,6 +1,7 @@
 package com.example.monografiassh2013;
 
 import com.example.monografiassh2013.bd.dao.Servidor;
+import com.example.monografiassh2013.conexao.Comandos;
 import com.example.monografiassh2013.conexao.ConfiguracaoConexao;
 import com.example.monografiassh2013.conexao.SSHClienteConexao;
 import com.example.monografiassh2013.utils.FormataEntrada;
@@ -67,18 +68,19 @@ public class OpcoesActivity extends Activity {
                 
                 ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
                 SSHClienteConexao ssh = new SSHClienteConexao();
-                ssh.conecta(config);
+                
                 
                 try {
-					String processos = ssh.exec("ps -A");
-                	Log.i("processos", processos.split("\n")[1]);
+                	ssh.conecta(config);
+                	String processos = ssh.exec(Comandos.LIST_PROCESSOS);
+                	Log.i("processos", processos.split("\n")+"");
                 	_toastTeste(processos);
                 	Intent i = new Intent(getApplicationContext(),ProcessosActivity.class);
                 	i.putExtra("processos", processos.split("\n"));
                 	startActivity(i);
                 	
 				} catch (Exception e) {
-
+                        _toastError(e.getMessage());
 				}
                 finally {
                 	ssh.desconecta();
@@ -98,18 +100,19 @@ public class OpcoesActivity extends Activity {
                 //startActivity(i);
                 ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
                 SSHClienteConexao ssh = new SSHClienteConexao();
-                ssh.conecta(config);
+                
                 
                 try {
-					String users = ssh.exec("who");
-                	Log.i("users", users.split("\n")[1]);
+                	ssh.conecta(config);
+                	String users = ssh.exec(Comandos.LIST_USUARIOS);
+                	Log.i("users", users.split("\n")+"");
                 	_toastTeste(users);
                 	Intent i = new Intent(getApplicationContext(),UsuariosActivity.class);
                 	i.putExtra("users", users.split("\n"));
                 	startActivity(i);
                 	
 				} catch (Exception e) {
-
+                      _toastError(e.getMessage());
 				}
                 finally {
                 	ssh.desconecta();
@@ -154,18 +157,19 @@ public class OpcoesActivity extends Activity {
 				
                 ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
                 SSHClienteConexao ssh = new SSHClienteConexao();
-                ssh.conecta(config);
+                
                 
                 try {
-					String redes = ssh.exec("ifconfig");
-                	Log.i("redes", redes.split("\n")[1]);
+                	ssh.conecta(config);
+                	String redes = ssh.exec(Comandos.LIST_REDES);
+                	Log.i("redes", redes.split("\n")+"");
                 	_toastTeste(redes);
                 	Intent i = new Intent(getApplicationContext(),RedeActivity.class);
                 	i.putExtra("redes", redes.split("\n"));
                 	startActivity(i);
                 	
 				} catch (Exception e) {
-
+                     _toastError(e.getMessage());
 				}
                 finally {
                 	ssh.desconecta();
@@ -190,6 +194,14 @@ public class OpcoesActivity extends Activity {
 	}
 	
 	private void _toastTeste(String s) {
+		Context context = getApplicationContext();
+		CharSequence text = s;
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+	}
+	
+	private void _toastError(String s) {
 		Context context = getApplicationContext();
 		CharSequence text = s;
 		int duration = Toast.LENGTH_SHORT;
