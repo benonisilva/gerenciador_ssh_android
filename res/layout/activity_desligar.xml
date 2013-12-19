@@ -13,19 +13,19 @@
         android:id="@+id/txt_desligar_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Desligar"
+        android:text="@string/halt"
         android:textAppearance="?android:attr/textAppearanceLarge"  />
 
     <Button
         android:id="@+id/btn_desligar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Desligar" />
+        android:text="@string/halt" />
 
     <Button
         android:id="@+id/btn_reiniciar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reiniciar" />
+        android:text="@string/restart" />
 
 </LinearLayout>

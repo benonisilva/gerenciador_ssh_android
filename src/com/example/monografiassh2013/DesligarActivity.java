@@ -1,8 +1,7 @@
 package com.example.monografiassh2013;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.os.Bundle;
 
 public class DesligarActivity extends Activity {
 

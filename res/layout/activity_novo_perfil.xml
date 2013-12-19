@@ -13,45 +13,50 @@
         android:id="@+id/txt_novo_perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Novo Perfil de Servidor"
+        android:text="@string/novop"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/etxt_nome_servidor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome Servidor"
+        android:hint="@string/nomeser"
         android:ems="10" />
     <EditText
         android:id="@+id/eTxtHost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Host"
-        android:ems="10" />
+        android:hint="@string/host"
+        android:maxLength="40"
+        android:lines="1" 
+        android:inputType="textUri"
+        android:textSize="12sp"
+        
+     />
     <EditText
         android:id="@+id/etxt_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuário"
+        android:hint="@string/user"
         android:ems="10" />
     <EditText
 	    android:id="@+id/etxt_senha"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
         android:inputType="textPassword"
-	    android:hint="Senha"
+	    android:hint="@string/senha"
 	    android:ems="10" />
     <EditText
         android:id="@+id/etxt_porta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Porta"
+        android:hint="@string/port"
         android:ems="10" />
 
     <Button
         android:id="@+id/btn_conectar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salvar" />
+        android:text="@string/salvar" />
 
 </LinearLayout>

@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="top"
-        android:text="Servidores"
+        android:text="@string/server"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <LinearLayout
@@ -23,7 +23,7 @@
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista" />    
+        android:text="@string/lista" />    
 
     </LinearLayout>
 
@@ -40,14 +40,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".50"
-            android:text="Novo" />
+            android:text="@string/novo" />
 
         <Button
             android:id="@+id/btn_conectar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".50"
-            android:text="Conectar" />
+            android:text="@string/conectar" />
     </LinearLayout>
 
 </RelativeLayout>

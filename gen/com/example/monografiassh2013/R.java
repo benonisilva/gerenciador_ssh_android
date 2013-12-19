@@ -25,41 +25,35 @@ public final class R {
     }
     public static final class id {
         public static final int btn_conectar=0x7f070005;
-        public static final int btn_desligar=0x7f070007;
-        public static final int btn_disco=0x7f07000d;
-        public static final int btn_hardware=0x7f070018;
-        public static final int btn_memoria=0x7f07000e;
-        public static final int btn_novo=0x7f070012;
-        public static final int btn_processo=0x7f070015;
-        public static final int btn_redes=0x7f070019;
-        public static final int btn_reiniciar=0x7f070008;
-        public static final int btn_sistema=0x7f070017;
-        public static final int btn_usuarios=0x7f070016;
+        public static final int btn_deletar=0x7f070006;
+        public static final int btn_desligar=0x7f070008;
+        public static final int btn_disco=0x7f07000b;
+        public static final int btn_hardware=0x7f070016;
+        public static final int btn_memoria=0x7f07000c;
+        public static final int btn_novo=0x7f070010;
+        public static final int btn_processo=0x7f070013;
+        public static final int btn_redes=0x7f070017;
+        public static final int btn_reiniciar=0x7f070009;
+        public static final int btn_sistema=0x7f070015;
+        public static final int btn_usuarios=0x7f070014;
         public static final int eTxtHost=0x7f070001;
-        public static final int etxt_nome_servidor=0x7f070013;
+        public static final int etxt_nome_servidor=0x7f070011;
         public static final int etxt_porta=0x7f070004;
         public static final int etxt_senha=0x7f070003;
         public static final int etxt_usuario=0x7f070002;
-        public static final int linear_layout_btn=0x7f070011;
-        public static final int scroll_lista_servidores=0x7f070010;
-        public static final int titulo_main_text=0x7f07000f;
-        public static final int txt_Kerner=0x7f070021;
-        public static final int txt_desligar_titulo=0x7f070006;
-        public static final int txt_duracao=0x7f07001f;
-        public static final int txt_enviado=0x7f07001e;
-        public static final int txt_hardware_titulo=0x7f07000c;
+        public static final int linear_layout_btn=0x7f07000f;
+        public static final int scroll_lista_servidores=0x7f07000e;
+        public static final int titulo_main_text=0x7f07000d;
+        public static final int txt_Kerner=0x7f07001b;
+        public static final int txt_desligar_titulo=0x7f070007;
+        public static final int txt_hardware_titulo=0x7f07000a;
         public static final int txt_novo_perfil=0x7f070000;
-        public static final int txt_opcoes=0x7f070014;
-        public static final int txt_processos_titulo=0x7f07001a;
-        public static final int txt_pt_acesso=0x7f070020;
-        public static final int txt_recebido=0x7f07001d;
-        public static final int txt_rede_titulo=0x7f07001b;
-        public static final int txt_so_titulo=0x7f070009;
-        public static final int txt_status=0x7f07001c;
-        public static final int txt_swap=0x7f07000b;
-        public static final int txt_total=0x7f07000a;
-        public static final int txt_usuarios_titulo=0x7f070023;
-        public static final int txt_versao=0x7f070022;
+        public static final int txt_opcoes=0x7f070012;
+        public static final int txt_processos_titulo=0x7f070018;
+        public static final int txt_rede_titulo=0x7f070019;
+        public static final int txt_so_titulo=0x7f07001a;
+        public static final int txt_usuarios_titulo=0x7f07001d;
+        public static final int txt_versao=0x7f07001c;
     }
     public static final class layout {
         public static final int activity_conexao_direta=0x7f030000;
@@ -76,21 +70,29 @@ public final class R {
         public static final int activity_usuarios=0x7f03000b;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
-        public static final int title_activity_conexao_direta=0x7f050005;
-        public static final int title_activity_desligar=0x7f05000e;
-        public static final int title_activity_disco=0x7f05000d;
-        public static final int title_activity_hardware=0x7f05000b;
-        public static final int title_activity_memoria=0x7f05000c;
-        public static final int title_activity_novo_perfil=0x7f050003;
-        public static final int title_activity_opcoes=0x7f050004;
-        public static final int title_activity_processos=0x7f050006;
-        public static final int title_activity_rede=0x7f050007;
-        public static final int title_activity_servidor=0x7f050009;
-        public static final int title_activity_so=0x7f05000a;
-        public static final int title_activity_usuarios=0x7f050008;
+        public static final int conectar=0x7f050005;
+        public static final int deletar=0x7f050004;
+        public static final int discos=0x7f050010;
+        public static final int halt=0x7f05000b;
+        public static final int hard=0x7f050008;
+        public static final int host=0x7f050001;
+        public static final int lista=0x7f050011;
+        public static final int mem=0x7f050006;
+        public static final int nome=0x7f050003;
+        public static final int nomeser=0x7f050015;
+        public static final int novo=0x7f050013;
+        public static final int novop=0x7f050014;
+        public static final int op=0x7f05000d;
+        public static final int port=0x7f05000a;
+        public static final int processo=0x7f05000e;
+        public static final int redes=0x7f05000f;
+        public static final int restart=0x7f05000c;
+        public static final int salvar=0x7f050016;
+        public static final int senha=0x7f050002;
+        public static final int server=0x7f050012;
+        public static final int sis=0x7f050007;
+        public static final int user=0x7f050009;
     }
     public static final class style {
         /** 

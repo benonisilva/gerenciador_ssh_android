@@ -13,7 +13,7 @@
         android:id="@+id/txt_usuarios_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Usuários"
+        android:text="@string/user"
         android:textAppearance="?android:attr/textAppearanceLarge"  />
 
     <LinearLayout
@@ -25,7 +25,7 @@
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista" />    
+        android:text="@string/lista" />    
    
      </LinearLayout>
 

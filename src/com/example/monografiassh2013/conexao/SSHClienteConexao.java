@@ -11,7 +11,7 @@ import net.schmizz.sshj.connection.channel.direct.Session;
 import net.schmizz.sshj.transport.TransportException;
 import android.util.Log;
 
-
+//Classe usada para conexao e envio de comandos
 public class SSHClienteConexao {
 
 	final SSHClient ssh = new SSHClient(new AndroidConfig());
@@ -42,8 +42,14 @@ public class SSHClienteConexao {
 		return isOpen; 
 	}
 	
+	/*
+	 * executa os comandos passados
+	 * PS: nao tratar as excessoes para apresentar ao usuario nas classes
+	 * que chamarem esse metodo
+	 */
 	public String exec(String command) {
-		 Log.i("exec", "inicio");
+		//temp
+		Log.i("exec", "inicio");
 		
 		net.schmizz.sshj.connection.channel.direct.Session session = null;
 		try {
@@ -51,9 +57,11 @@ public class SSHClienteConexao {
 		} catch (ConnectionException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return e.getMessage();
 		} catch (TransportException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return e.getMessage();
 		} 
 		
 		Session.Command cmd = null;
@@ -65,6 +73,7 @@ public class SSHClienteConexao {
 		} catch (TransportException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return e.getMessage();
 		}
         Log.i("exec", "antes join");
         try {
@@ -72,6 +81,7 @@ public class SSHClienteConexao {
 		} catch (ConnectionException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return e.getMessage();
 		}
         //temp
         Log.i("exec", "pos join");
@@ -91,6 +101,7 @@ public class SSHClienteConexao {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			
 		}
         
         /*
@@ -122,6 +133,9 @@ public class SSHClienteConexao {
         
         return saida;
     }
+	/*
+	 * fecha conexao aberta
+	 */
 	public boolean desconecta() {
 		try {
 			this.ssh.close();

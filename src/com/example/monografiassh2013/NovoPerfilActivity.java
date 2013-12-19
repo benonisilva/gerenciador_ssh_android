@@ -10,13 +10,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 
+/*
+ * cria novo perfil(servidor) e adiciona ao bd
+ */
 public class NovoPerfilActivity extends Activity {
     
 	private ServidorDataSource datasource;
-	private String nome,host,user,pass;
-	private int porta;
+	//private String nome,host,user,pass;
+	//private int porta;
 	private EditText ed_nome,ed_host,ed_user,ed_pass,ed_porta;
 	
 	@Override

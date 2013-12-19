@@ -13,19 +13,17 @@
         android:id="@+id/txt_so_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sistema Operacional"
         android:textAppearance="?android:attr/textAppearanceLarge"  />
+	
 	<TextView
         android:id="@+id/txt_Kerner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kernel: Debian"
         android:textAppearance="?android:attr/textAppearanceMedium"  />
 	<TextView
         android:id="@+id/txt_versao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Versão: N.X.M"
         android:textAppearance="?android:attr/textAppearanceMedium"  />
     
 

@@ -1,36 +1,27 @@
 package com.example.monografiassh2013;
 
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
-
 import com.example.monografiassh2013.bd.dao.Servidor;
 import com.example.monografiassh2013.bd.dao.ServidorDataSource;
 import com.example.monografiassh2013.conexao.ConfiguracaoConexao;
 import com.example.monografiassh2013.conexao.SSHClienteConexao;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
-import net.schmizz.sshj.AndroidConfig;
-import net.schmizz.sshj.SSHClient;
-import net.schmizz.sshj.common.*;
-import net.schmizz.sshj.sftp.SFTPClient;
-import net.schmizz.sshj.transport.verification.HostKeyVerifier;
 
 
-
+/*
+ * Mostra os servidores cadastrados
+ */
 
 public class MainActivity extends ListActivity {
     //temp
@@ -70,8 +61,7 @@ public class MainActivity extends ListActivity {
 		porta = 22;
 		config = new ConfiguracaoConexao(host, username, pass, porta);
 		
-		//abre servidor e popula lista
-		
+		//abre servidor e popula lista com servidores cadastrados no bd
 		datasource = new ServidorDataSource(this);
 		datasource.open();
 		values = datasource.getAllServidores();
@@ -79,7 +69,7 @@ public class MainActivity extends ListActivity {
 		// SimpleCursorAdapter para mostrar
 	    // elementos numa ListView
 	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-	        android.R.layout.simple_list_item_1, _getNomesServidores(values));
+	        android.R.layout.simple_list_item_2, _getNomesServidores(values));
 	    setListAdapter(adapter);
 	  
 		 
@@ -103,6 +93,7 @@ public class MainActivity extends ListActivity {
 
 	/**
 	 * 
+	 * 
 	 * @return retorna um CliclListener para o Bot�o NovoPerfil
 	 */
 	private View.OnClickListener ListenerBotaoNovo(){
@@ -119,6 +110,9 @@ public class MainActivity extends ListActivity {
 
 		};
 	}
+	/*
+	 * mudar para "teste de conexao" talvez
+	 */
 	private View.OnClickListener ListenerBotaoConectar(){
 
 		return new View.OnClickListener(){
@@ -126,13 +120,14 @@ public class MainActivity extends ListActivity {
 			@Override
 			public void onClick(View v) {
 				
+				
 				SSHClienteConexao s = new SSHClienteConexao();
 				try {
-					s.conecta(config);
+					s.conecta(config);// realiza conexao, nao é nescessario mas usei para informar ao usuario q o servidor esta acessivel desde ja
 					Intent i = new Intent(getApplicationContext(),ConexaoDiretaActivity.class);
 					startActivity(i);
 				} catch (Exception e) {
-					
+					//apresenta erro se falhar a conexao
 					_toastError(e.getMessage());
 				}
 				finally {
@@ -144,6 +139,7 @@ public class MainActivity extends ListActivity {
 		};
 	}
 
+	/*
 	public class Loadsomestuff extends AsyncTask<String, Integer, String> {
 
 
@@ -162,7 +158,7 @@ public class MainActivity extends ListActivity {
 
 		}
 
-	}
+	}*/
 	
 	@Override
 	  protected void onResume() {
@@ -182,7 +178,10 @@ public class MainActivity extends ListActivity {
 	    
 	  }
 	
-	private List<String>_getNomesServidores(List<Servidor> s) {
+	  /*
+	   * auxiliar para pupular adapter com o nome dos servidores
+	   */
+	  private List<String>_getNomesServidores(List<Servidor> s) {
 		
 		List<String> nomes = new ArrayList<String>(s.size());
 		for(Servidor i: s) {
@@ -207,6 +206,13 @@ public class MainActivity extends ListActivity {
 		int duration = Toast.LENGTH_SHORT;
 		Toast toast = Toast.makeText(context, text, duration);
 		toast.show();
+	}
+	
+	@Override
+	public void finish() {
+		// TODO Auto-generated method stub
+		super.finish();
+		datasource.close();
 	}
            
 }

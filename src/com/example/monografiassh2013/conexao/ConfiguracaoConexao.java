@@ -6,7 +6,7 @@ package com.example.monografiassh2013.conexao;
 
 public class ConfiguracaoConexao {
 	
-	private String host,ip,username,password;
+	private String host,username,password;
 	private int porta;
 
 	public String getHost() {

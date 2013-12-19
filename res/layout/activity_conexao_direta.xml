@@ -13,39 +13,45 @@
         android:id="@+id/txt_novo_perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Conectar"
+        android:text="@string/conectar"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/eTxtHost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Host"
+        android:hint="@string/host"
         android:ems="10" />
     <TextView
         android:id="@+id/etxt_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuário"
+        android:hint="@string/user"
         android:ems="10" />
     <TextView
 	    android:id="@+id/etxt_senha"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
         android:inputType="textPassword"
-	    android:hint="Senha"
+	    android:hint="@string/senha"
 	    android:ems="10" />
     <TextView
         android:id="@+id/etxt_porta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Porta"
+        android:hint="@string/port"
         android:ems="10" />
 
     <Button
         android:id="@+id/btn_conectar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Conectar" />
+        android:text="@string/conectar" />
+    
+    <Button
+        android:id="@+id/btn_deletar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deletar" />
 
 </LinearLayout>

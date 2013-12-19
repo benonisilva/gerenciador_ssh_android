@@ -13,7 +13,7 @@
         android:id="@+id/txt_opcoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Escolha uma opção"
+        android:text="@string/op"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -21,30 +21,31 @@
         android:id="@+id/btn_processo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Processo" />
+        android:text="@string/processo" />
 	<Button
         android:id="@+id/btn_usuarios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Usuários" />
+        android:text="@string/user" />
 	<Button
         android:id="@+id/btn_sistema"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sistema" />
+        android:text="@string/sis" />
 	<Button
         android:id="@+id/btn_hardware"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hardware" />
+        android:text="@string/hard" />
 	<Button
         android:id="@+id/btn_redes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Redes" />
+        android:text="@string/redes" />
 	<Button
         android:id="@+id/btn_desligar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Desligar" />
+        android:text="@string/halt" />
+
 </LinearLayout>

@@ -4,20 +4,23 @@ import com.example.monografiassh2013.bd.dao.Servidor;
 import com.example.monografiassh2013.conexao.Comandos;
 import com.example.monografiassh2013.conexao.ConfiguracaoConexao;
 import com.example.monografiassh2013.conexao.SSHClienteConexao;
-import com.example.monografiassh2013.utils.FormataEntrada;
-
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/*
+ * apresenta todas as opcoes de comandos
+ */
 public class OpcoesActivity extends Activity {
     private Servidor servidor;
+	public ProgressDialog myPd_ring;
 	
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,35 +59,26 @@ public class OpcoesActivity extends Activity {
 		Log.i("user", servidor.getUser());
 		Log.i("pass", servidor.getPass());
 		Log.i("port", String.valueOf(servidor.getPorta()));
+		
+		//myPd_ring =  (ProgressDialog) findViewById(R.id.progressBar1);
 	}
-	private View.OnClickListener ListenerBotaoProcesso(){
+	/*
+	 * botao que executa o comando usando a classe auxiliar Executestuff
+	 * todas as outras opcoes seguem o mesmo padrao
+	 * 
+	 * PS: refatorar para diminuir o codigo usando apenas um listner e pegando o id do botao
+	 * usando um switch
+	 */
+    private View.OnClickListener ListenerBotaoProcesso(){
 		
 		return new View.OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-				//Intent i = new Intent(getApplicationContext(),ProcessosActivity.class);
-                //startActivity(i);
-                
-                ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
-                SSHClienteConexao ssh = new SSHClienteConexao();
-                
-                
-                try {
-                	ssh.conecta(config);
-                	String processos = ssh.exec(Comandos.LIST_PROCESSOS);
-                	Log.i("processos", processos.split("\n")+"");
-                	_toastTeste(processos);
-                	Intent i = new Intent(getApplicationContext(),ProcessosActivity.class);
-                	i.putExtra("processos", processos.split("\n"));
-                	startActivity(i);
-                	
-				} catch (Exception e) {
-                        _toastError(e.getMessage());
-				}
-                finally {
-                	ssh.desconecta();
-                }
+				Intent i = new Intent(getApplicationContext(),ProcessosActivity.class);
+                //v.getId();            
+                Executestuff e = new Executestuff();
+                e.execute(i,Comandos.LIST_PROCESSOS,"processos","\n");
 
 			}
 			
@@ -96,10 +90,14 @@ public class OpcoesActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				//Intent i = new Intent(getApplicationContext(),UsuariosActivity.class);
+				Intent i = new Intent(getApplicationContext(),UsuariosActivity.class);
                 //startActivity(i);
-                ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
+				Executestuff e = new Executestuff();
+                e.execute(i,Comandos.LIST_USUARIOS,"users","\n");
+				/*
+				ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
                 SSHClienteConexao ssh = new SSHClienteConexao();
+                
                 
                 
                 try {
@@ -116,7 +114,7 @@ public class OpcoesActivity extends Activity {
 				}
                 finally {
                 	ssh.desconecta();
-                }
+                }*/
 
 			}
 			
@@ -129,7 +127,31 @@ public class OpcoesActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(getApplicationContext(),SOActivity.class);
-                startActivity(i);
+                //startActivity(i);
+                
+				Executestuff e = new Executestuff();
+                e.execute(i,Comandos.INFO_SISTEMA,"so","\t");
+				
+				/*
+				ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
+                SSHClienteConexao ssh = new SSHClienteConexao();
+                
+                
+                try {
+                	ssh.conecta(config);
+                	String users = ssh.exec(Comandos.INFO_SISTEMA);
+                	Log.i("so", users.split("\t")+"");
+                	_toastTeste(users);
+                	Intent i = new Intent(getApplicationContext(),SOActivity.class);
+                	i.putExtra("so", users.split("\t"));
+                	startActivity(i);
+                	
+				} catch (Exception e) {
+                      _toastError(e.getMessage());
+				}
+                finally {
+                	ssh.desconecta();
+                }*/
 
 			}
 			
@@ -142,7 +164,31 @@ public class OpcoesActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(getApplicationContext(),HardwareActivity.class);
-                startActivity(i);
+                //startActivity(i);
+				Executestuff e = new Executestuff();
+                e.execute(i,Comandos.INFO_SISTEMA,"servidor","\t");
+				
+				
+				/*
+                ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
+                SSHClienteConexao ssh = new SSHClienteConexao();
+                
+                
+                try {
+                	ssh.conecta(config);
+                	//String users = ssh.exec(Comandos.INFO_SISTEMA);
+                	//Log.i("so", users.split("\t")+"");
+                	//_toastTeste(users);
+                	Intent i = new Intent(getApplicationContext(),HardwareActivity.class);
+                	i.putExtra("servidor", servidor);
+                	startActivity(i);
+                	
+				} catch (Exception e) {
+                      _toastError(e.getMessage());
+				}
+                finally {
+                	ssh.desconecta();
+                }*/
 
 			}
 			
@@ -154,7 +200,11 @@ public class OpcoesActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				Intent i = new Intent(getApplicationContext(),RedeActivity.class);
 				
+				Executestuff e = new Executestuff();
+                e.execute(i,Comandos.LIST_REDES,"redes","\n");
+				/*
                 ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
                 SSHClienteConexao ssh = new SSHClienteConexao();
                 
@@ -164,7 +214,7 @@ public class OpcoesActivity extends Activity {
                 	String redes = ssh.exec(Comandos.LIST_REDES);
                 	Log.i("redes", redes.split("\n")+"");
                 	_toastTeste(redes);
-                	Intent i = new Intent(getApplicationContext(),RedeActivity.class);
+                	
                 	i.putExtra("redes", redes.split("\n"));
                 	startActivity(i);
                 	
@@ -173,7 +223,7 @@ public class OpcoesActivity extends Activity {
 				}
                 finally {
                 	ssh.desconecta();
-                }
+                } */
                 
 			}
 			
@@ -207,6 +257,73 @@ public class OpcoesActivity extends Activity {
 		int duration = Toast.LENGTH_SHORT;
 		Toast toast = Toast.makeText(context, text, duration);
 		toast.show();
+	}
+	
+	/*
+	 * classe auxiliar usada para executar os comandos em background e enviar apara activity que apresentara
+	 * o resultado
+	 */
+	public class Executestuff extends AsyncTask<Object, String, String> {
+          
+		
+		
+
+		@Override
+		protected String doInBackground(Object... arg0) {
+            
+			ConfiguracaoConexao config = new ConfiguracaoConexao(servidor.getHost(), servidor.getUser(), servidor.getPass(), servidor.getPorta());
+            SSHClienteConexao ssh = new SSHClienteConexao();
+            
+            String comando,c,sep;//comando recebido e separador usado na formataçao
+            comando= (String)arg0[1];
+            c = (String)arg0[2];
+            sep = (String) arg0[3];
+            Intent i = (Intent)arg0[0];//PS:varias intentes fazem a mesma coisa, possivel uso de herança iria enxugar o codigo
+            
+            try {
+            	ssh.conecta(config);//conecta
+            	String inf = ssh.exec(comando);//executa comando e devolve resultado
+            	Log.i(c, inf.split(sep)+"");//separa para apresentar como lista
+            	//pequena gambiarra usada pois a activity Hardware nao recebe um comando 
+            	if(c.equals("servidor")) {
+            		i.putExtra(c, servidor);//enviar servidor para HardwareActivity
+            	}
+            	else {
+            		i.putExtra(c, inf.split(sep)); //envia a lista do resultado de comando
+            	}
+            	
+            	startActivity(i);
+            	//finish();
+			} catch (Exception e) {
+                    _toastError(e.getMessage());
+			}
+            finally {
+            	ssh.desconecta();
+            }
+			
+			return "Executed";
+
+
+		}
+        
+		//idem de ConexaoDiretaActivity
+		@Override
+		protected void onPostExecute(String abc){
+			super.onPostExecute(abc);
+	        myPd_ring.dismiss();
+
+		}
+		
+		//idem de ConexaoDiretaActivity
+		@Override
+        protected void onPreExecute() {
+
+            myPd_ring  = new ProgressDialog (OpcoesActivity.this);
+            myPd_ring.setMessage("Loading");
+            myPd_ring.show();
+
+        }
+
 	}
 
 }

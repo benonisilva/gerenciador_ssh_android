@@ -13,19 +13,19 @@
         android:id="@+id/txt_hardware_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hardware"
+        android:text="@string/hard"
         android:textAppearance="?android:attr/textAppearanceLarge"  />
 
     <Button
         android:id="@+id/btn_disco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Disco" />
+        android:text="@string/discos" />
 
     <Button
         android:id="@+id/btn_memoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Memória" />
+        android:text="@string/mem" />
 
 </LinearLayout>

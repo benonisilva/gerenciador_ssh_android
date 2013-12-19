@@ -1,0 +1,224 @@
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+root         1     0  0   949  2240   3 02:51 ?        00:00:01 /sbin/init
+root         2     0  0     0     0   0 02:51 ?        00:00:00 [kthreadd]
+root         3     2  0     0     0   0 02:51 ?        00:00:00 [ksoftirqd/0]
+root         6     2  0     0     0   0 02:51 ?        00:00:00 [migration/0]
+root         7     2  0     0     0   0 02:51 ?        00:00:00 [watchdog/0]
+root        21     2  0     0     0   2 02:51 ?        00:00:00 [cpuset]
+root        22     2  0     0     0   2 02:51 ?        00:00:00 [khelper]
+root        23     2  0     0     0   3 02:51 ?        00:00:00 [kdevtmpfs]
+root        24     2  0     0     0   2 02:51 ?        00:00:00 [netns]
+root        26     2  0     0     0   0 02:51 ?        00:00:00 [sync_supers]
+root        27     2  0     0     0   1 02:51 ?        00:00:00 [bdi-default]
+root        28     2  0     0     0   2 02:51 ?        00:00:00 [kintegrityd]
+root        29     2  0     0     0   2 02:51 ?        00:00:00 [kblockd]
+root        30     2  0     0     0   2 02:51 ?        00:00:00 [ata_sff]
+root        31     2  0     0     0   0 02:51 ?        00:00:00 [khubd]
+root        32     2  0     0     0   2 02:51 ?        00:00:00 [md]
+root        34     2  0     0     0   3 02:51 ?        00:00:00 [khungtaskd]
+root        35     2  0     0     0   2 02:51 ?        00:00:00 [kswapd0]
+root        36     2  0     0     0   3 02:51 ?        00:00:00 [ksmd]
+root        37     2  0     0     0   2 02:51 ?        00:00:00 [khugepaged]
+root        38     2  0     0     0   0 02:51 ?        00:00:00 [fsnotify_mark]
+root        39     2  0     0     0   2 02:51 ?        00:00:00 [ecryptfs-kthrea]
+root        40     2  0     0     0   2 02:51 ?        00:00:00 [crypto]
+root        48     2  0     0     0   2 02:51 ?        00:00:00 [kthrotld]
+root        52     2  0     0     0   1 02:51 ?        00:00:00 [scsi_eh_0]
+root        53     2  0     0     0   1 02:51 ?        00:00:00 [scsi_eh_1]
+root        54     2  0     0     0   1 02:51 ?        00:00:00 [scsi_eh_2]
+root        55     2  0     0     0   1 02:51 ?        00:00:00 [scsi_eh_3]
+root        56     2  0     0     0   1 02:51 ?        00:00:00 [scsi_eh_4]
+root        57     2  0     0     0   1 02:51 ?        00:00:00 [scsi_eh_5]
+root        80     2  0     0     0   2 02:51 ?        00:00:00 [devfreq_wq]
+root       282     2  0     0     0   0 02:51 ?        00:00:01 [jbd2/sda3-8]
+root       283     2  0     0     0   2 02:51 ?        00:00:00 [ext4-dio-unwrit]
+root       607     1  0   709   608   0 02:52 ?        00:00:00 upstart-udev-bridge --daemon
+root       616     2  0     0     0   0 02:52 ?        00:00:00 [rpciod]
+root       624     2  0     0     0   2 02:52 ?        00:00:00 [nfsiod]
+root       642     1  0  1671  2408   2 02:52 ?        00:00:00 /usr/sbin/sshd -D
+root       646     1  0   728   400   3 02:52 ?        00:00:00 rpc.idmapd
+root       647     1  0   815  1516   2 02:52 ?        00:00:00 /sbin/udevd --daemon
+102        677     1  0  1089  1956   2 02:52 ?        00:00:10 dbus-daemon --system --fork --activation=upstart
+root       724     1  0  1210  2068   0 02:52 ?        00:00:00 /usr/sbin/bluetoothd
+syslog     729     1  0  7766  1512   2 02:52 ?        00:00:01 rsyslogd -c5
+root       749     2  0     0     0   3 02:52 ?        00:00:00 [krfcommd]
+avahi      766     1  0   894  1744   2 02:52 ?        00:00:00 avahi-daemon: running [benoni-Inspiron-N4050.local]
+avahi      769   766  0   864   432   1 02:52 ?        00:00:00 avahi-daemon: chroot helper
+root       800     2  0     0     0   1 02:52 ?        00:00:00 [cfg80211]
+root       801     2  0     0     0   3 02:52 ?        00:00:00 [kpsmoused]
+root       805     1  0  2769  3536   0 02:52 ?        00:00:00 /usr/sbin/cupsd -F
+root       893     2  0     0     0   2 02:52 ?        00:00:00 [hd-audio0]
+root       991     1  0  5352  4852   1 02:52 ?        00:00:00 smbd -F
+root      1007   991  0  5372  1372   3 02:52 ?        00:00:00 smbd -F
+root      1008     1  0   675  1000   0 02:52 ?        00:00:00 rpcbind -w
+root      1035     1  0  7355  5500   1 02:52 ?        00:00:05 NetworkManager
+root      1046     1  0  6336  4364   1 02:52 ?        00:00:10 /usr/lib/policykit-1/polkitd --no-debug
+statd     1068     1  0   740  1280   3 02:52 ?        00:00:00 rpc.statd -L
+root      1086     1  0   712   404   2 02:52 ?        00:00:00 upstart-socket-bridge --daemon
+root      1138     1  0  1158   860   3 02:52 tty4     00:00:00 /sbin/getty -8 38400 tty4
+root      1152     1  0  1158   864   0 02:52 tty5     00:00:00 /sbin/getty -8 38400 tty5
+root      1164     1  0  1158   864   1 02:52 tty2     00:00:00 /sbin/getty -8 38400 tty2
+root      1168     1  0  1158   864   1 02:52 tty3     00:00:00 /sbin/getty -8 38400 tty3
+root      1181     1  0  1158   860   0 02:52 tty6     00:00:00 /sbin/getty -8 38400 tty6
+root      1211     2  0     0     0   3 02:52 ?        00:00:00 [lockd]
+root      1215     1  0  1492  2188   3 02:52 ?        00:00:00 /sbin/wpa_supplicant -B -P /run/sendsigs.omit.d/wpasupplicant.pid -u -s -O /var/run/wpa_supplicant
+root      1216     2  0     0     0   3 02:52 ?        00:00:00 [nfsd4]
+root      1217     2  0     0     0   1 02:52 ?        00:00:00 [nfsd4_callbacks]
+root      1218     2  0     0     0   0 02:52 ?        00:00:00 [nfsd]
+root      1219     2  0     0     0   2 02:52 ?        00:00:00 [nfsd]
+root      1220     2  0     0     0   1 02:52 ?        00:00:00 [nfsd]
+root      1221     2  0     0     0   3 02:52 ?        00:00:00 [nfsd]
+root      1222     2  0     0     0   0 02:52 ?        00:00:00 [nfsd]
+root      1223     2  0     0     0   1 02:52 ?        00:00:00 [nfsd]
+root      1224     2  0     0     0   3 02:52 ?        00:00:00 [nfsd]
+root      1225     2  0     0     0   3 02:52 ?        00:00:00 [nfsd]
+root      1229     1  0   844   852   3 02:52 ?        00:00:00 /usr/sbin/rpc.mountd --manage-gids
+root      1269     1  0  1173   980   3 02:52 ?        00:00:00 /usr/sbin/vsftpd
+whoopsie  1270     1  0  6477  4432   1 02:52 ?        00:00:00 whoopsie
+root      1273     1  0   577   788   0 02:52 ?        00:00:00 acpid -c /etc/acpi/events -s /var/run/acpid.socket
+root      1275     1  0   901   636   0 02:52 ?        00:00:03 /usr/sbin/irqbalance
+root      1279     1  0  8510  3112   2 02:52 ?        00:00:00 lightdm
+root      1285     1  0   655   936   1 02:52 ?        00:00:00 cron
+daemon    1286     1  0   618   348   3 02:52 ?        00:00:00 atd
+mysql     1298     1  0 79910 39536   2 02:52 ?        00:00:06 /usr/sbin/mysqld
+root      1299     2  0     0     0   1 02:52 ?        00:00:00 [kvm-irqfd-clean]
+root      1348  1279  1  8552 22256   0 02:52 tty7     00:05:57 /usr/bin/X :0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch -background none
+root      1492     1  0  3959  3464   1 02:52 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+root      1594     1  0  8558  3480   3 02:52 ?        00:00:02 /usr/sbin/console-kit-daemon --no-daemon
+root      1754     1  0  7461  5204   1 02:52 ?        00:00:02 /usr/lib/upower/upowerd
+colord    1901     1  0 13341 10328   1 02:52 ?        00:00:00 /usr/lib/i386-linux-gnu/colord/colord
+root      1955  1279  0  4580  3600   0 02:52 ?        00:00:00 lightdm --session-child 12 19
+rtkit     2004     1  0  5334  1240   1 02:52 ?        00:00:00 /usr/lib/rtkit/rtkit-daemon
+root      2025     1  0  1145  1468   1 02:52 ?        00:00:00 /usr/lib/postfix/master
+123       2035     1  0  7109 24688   0 02:52 ?        00:00:08 /usr/sbin/tor
+root      2036     2  0     0     0   0 02:52 ?        00:00:01 [flush-8:0]
+root      2050     2  0     0     0   3 02:52 ?        00:00:00 [iprt]
+root      2071     1  0   645   704   2 02:52 ?        00:00:00 /usr/sbin/cnid_metad -l log_note
+root      2075     1  0  3452  1744   3 02:52 ?        00:00:00 /usr/sbin/afpd -U uams_dhx2.so,uams_clrtxt.so -g nobody -c 50 -n benoni-Inspiron-N4050
+root      2118     1  0  9489  7612   0 02:52 ?        00:00:00 /usr/sbin/apache2 -k start
+root      2124     1  0  1158   864   3 02:52 tty1     00:00:00 /sbin/getty -8 38400 tty1
+root      2127  2118  0  9495  3820   3 02:52 ?        00:00:00 /usr/sbin/apache2 -k start
+root      2128  2118  0  9495  3820   3 02:52 ?        00:00:00 /usr/sbin/apache2 -k start
+root      2129  2118  0  9495  3820   2 02:52 ?        00:00:00 /usr/sbin/apache2 -k start
+root      2130  2118  0  9495  3820   0 02:52 ?        00:00:00 /usr/sbin/apache2 -k start
+root      2131  2118  0  9495  3820   2 02:52 ?        00:00:00 /usr/sbin/apache2 -k start
+benoni    2196     1  0 17766  3756   2 02:52 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+nobody    2207  1035  0   831  1328   0 02:52 ?        00:00:00 /usr/sbin/dnsmasq --no-resolv --keep-in-foreground --no-hosts --bind-interfaces --pid-file=/var/run/sendsigs.omit.d/network-manager.dnsmasq.pid --listen-address=127.0.0.1 --conf-file=/var/run/nm-dns-dnsmasq.conf --cache-size=0 --proxy-dnssec --enable-dbus --conf-dir=/etc/NetworkManager/dnsmasq.d
+benoni    2269  1955  0 13376 11000   1 02:52 ?        00:00:00 gnome-session --session=gnome
+root      2421     2  0     0     0   1 06:31 ?        00:00:01 [kworker/u:1]
+root      2532     1  0  3333  1852   3 02:52 ?        00:00:00 nmbd -D
+benoni    2548  2269  0     0     0   2 02:52 ?        00:00:00 [lightdm-session] <defunct>
+benoni    2556  2269  0  1020   208   2 02:52 ?        00:00:00 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session gnome-session --session=gnome
+benoni    2559     1  0   985   492   0 02:52 ?        00:00:00 /usr/bin/dbus-launch --exit-with-session gnome-session --session=gnome
+benoni    2560     1  0  1378  2196   0 02:52 ?        00:00:01 //bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+benoni    2564     1  0  2144  2320   3 02:52 ?        00:00:00 /usr/lib/gvfs/gvfsd
+benoni    2566     1  0  8690  2568   3 02:52 ?        00:00:00 /usr/lib/gvfs//gvfs-fuse-daemon -f /home/benoni/.gvfs
+benoni    2578     1  0  2547  3544   0 02:52 ?        00:00:00 /usr/lib/i386-linux-gnu/gconf/gconfd-2
+benoni    2585  2269  0 77220 18860   3 02:52 ?        00:00:04 /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+benoni    2594     1  0 11098  3024   2 02:52 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+benoni    2598  2594  0   880  1580   0 02:52 ?        00:00:04 /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+benoni    2601     1  0  4250  3044   3 02:52 ?        00:00:01 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+benoni    2605     1  0 12480  4172   0 02:52 ?        00:00:00 /usr/lib/gnome-settings-daemon/gsd-printer
+benoni    2607  2269  1 131394 115860 0 02:52 ?        00:05:01 /usr/bin/gnome-shell
+benoni    2611  2585  0   928   792   1 02:52 ?        00:00:10 syndaemon -i 2.0 -K -R -t
+benoni    2616     1  1 25117  6556   3 02:52 ?        00:07:24 /usr/bin/pulseaudio --start --log-target=syslog
+benoni    2623  2616  0  3526  2488   0 02:52 ?        00:00:00 /usr/lib/pulseaudio/pulse/gconf-helper
+benoni    2628  2269  0 109365 36544  1 02:52 ?        00:00:20 nautilus -n
+benoni    2630  2269  0 60774 16100   2 02:52 ?        00:00:01 nm-applet
+benoni    2632  2269  0 178048 84924  3 02:52 ?        00:00:17 /opt/google/chrome/chrome --no-startup-window       
+benoni    2646     1  0  2611  3668   2 02:52 ?        00:00:00 /usr/lib/gvfs/gvfs-gdu-volume-monitor
+root      2648     1  0  6323  3692   1 02:52 ?        00:00:01 /usr/lib/udisks/udisks-daemon
+root      2649  2648  0  1639   732   2 02:52 ?        00:00:00 udisks-daemon: not polling any devices
+benoni    2652     1  0  5122  2140   3 02:52 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+benoni    2655     1  0  2303  2136   3 02:52 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+benoni    2657     1  0  2473  3604   3 02:52 ?        00:00:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+benoni    2658  2632  0 27861  6508   0 02:52 ?        00:00:00 /opt/google/chrome/chrome --no-startup-window --type=sandbox-ipc
+benoni    2659  2632  0   564   312   0 02:52 ?        00:00:00 /opt/google/chrome/chrome-sandbox /opt/google/chrome/chrome --type=zygote
+benoni    2660  2659  0 40138 21152   0 02:52 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+benoni    2664  2660  0  5737  3488   2 02:52 ?        00:00:00 /opt/google/chrome/nacl_helper
+benoni    2671  2660  0 44236 12308   0 02:52 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+benoni    2707     1  0  9348  4356   0 02:52 ?        00:00:34 /usr/bin/ibus-daemon --xim
+benoni    2708  2707  0  4650  3392   3 02:52 ?        00:00:00 /usr/lib/i386-linux-gnu/ibus/ibus-gconf
+benoni    2710  2707  0 40299 22252   2 02:52 ?        00:00:06 /usr/bin/python /usr/share/ibus/ui/gtk/main.py
+benoni    2712     1  0 10139  7536   3 02:52 ?        00:00:00 /usr/lib/i386-linux-gnu/ibus/ibus-x11 --kill-daemon
+benoni    2738  2269  0 10751  9208   1 02:52 ?        00:00:00 /usr/lib/gnome-disk-utility/gdu-notification-daemon
+benoni    2758  2671  0 53808 31980   0 02:52 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --lang=pt-BR --force-fieldtrials=AutocompleteDynamicTrial_2/DefaultControl_R2_Stable/CookieRetentionPriorityStudy/ExperimentOn/DeferBackgroundExtensionCreation/RateLimited/ForceCompositingMode/disable/InfiniteCache/No/Prerender/PrerenderEnabled/PrerenderLocalPredictorSpec/LocalPredictor=Disabled/Test0PercentDefault/group_01/UMA-Dynamic-Binary-Uniformity-Trial/default/UMA-New-Install-Uniformity-Trial/Control/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_02/UMA-Uniformity-Trial-1-Percent/group_32/UMA-Uniformity-Trial-10-Percent/group_09/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_01/UMA-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-50-Percent/group_01/ --enable-crash-reporter=38F843059F24C3F509A2BD95DD99426B,Ubuntu 12.04.3 LTS --extension-process --renderer-print-preview --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2632.0.1879747364
+benoni    2763  2671  0 54449 34024   1 02:52 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --lang=pt-BR --force-fieldtrials=AutocompleteDynamicTrial_2/DefaultControl_R2_Stable/CookieRetentionPriorityStudy/ExperimentOn/DeferBackgroundExtensionCreation/RateLimited/ForceCompositingMode/disable/InfiniteCache/No/Prerender/PrerenderEnabled/PrerenderLocalPredictorSpec/LocalPredictor=Disabled/Test0PercentDefault/group_01/UMA-Dynamic-Binary-Uniformity-Trial/default/UMA-New-Install-Uniformity-Trial/Control/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_02/UMA-Uniformity-Trial-1-Percent/group_32/UMA-Uniformity-Trial-10-Percent/group_09/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_01/UMA-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-50-Percent/group_01/ --enable-crash-reporter=38F843059F24C3F509A2BD95DD99426B,Ubuntu 12.04.3 LTS --extension-process --renderer-print-preview --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2632.1.1090848656
+benoni    2773     1  0  2419  1804   0 02:52 ?        00:00:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+benoni    2774  2269  0 10397  9036   3 02:52 ?        00:00:00 /usr/lib/gnome-user-share/gnome-user-share
+benoni    2780     1  0 14443  9900   2 02:52 ?        00:00:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+benoni    2787     1  0  2203  2336   1 02:52 ?        00:00:00 /usr/bin/obex-data-server --no-daemon 
+benoni    2789     1  0 10544  6388   3 02:52 ?        00:00:01 /usr/lib/telepathy/mission-control-5
+benoni    2798  2269  0 34440 13076   3 02:52 ?        00:00:00 gnome-screensaver
+benoni    2840     1  0 20228  9104   3 02:52 ?        00:00:00 /usr/lib/evolution/e-addressbook-factory
+benoni    2855     1  0  9799  4404   3 02:52 ?        00:00:00 /usr/lib/telepathy/telepathy-logger
+benoni    2875     1  0  2168  2492   0 02:53 ?        00:00:00 /usr/lib/gvfs/gvfsd-burn --spawner :1.2 /org/gtk/gvfs/exec_spaw/1
+benoni    2890     1  0  2455  3152   1 02:53 ?        00:00:00 /usr/lib/gvfs/gvfsd-metadata
+benoni    2892  2607  1 189151 154648 1 02:53 ?        00:05:38 /usr/lib/chromium-browser/chromium-browser
+benoni    2898  2892  0 32553  6992   1 02:53 ?        00:00:06 /usr/lib/chromium-browser/chromium-browser
+benoni    2899  2892  0   869   900   0 02:53 ?        00:00:00 /usr/lib/chromium-browser/chrome-sandbox /usr/lib/chromium-browser/chromium-browser --type=zygote
+benoni    2900  2899  0 35861 19776   0 02:53 ?        00:00:00 /usr/lib/chromium-browser/chromium-browser --type=zygote
+benoni    2904  2900  0 38166  5400   3 02:53 ?        00:00:00 /usr/lib/chromium-browser/chromium-browser --type=zygote
+benoni    2934  2904  0 81163 114508  0 02:53 ?        00:01:02 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.0.1409115617
+benoni    2946  2904  0 50206 26668   0 02:53 ?        00:00:00 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --extension-process --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.1.80470137
+benoni    2962  2904  0 50402 29928   3 02:53 ?        00:00:00 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --extension-process --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.2.683021943
+benoni    2968  2904  0 50829 30916   3 02:53 ?        00:00:08 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --extension-process --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.3.1601316440
+benoni    3078  2892  0 58240 59532   3 02:53 ?        00:00:11 /usr/lib/chromium-browser/chromium-browser --type=gpu-process --channel=2892.10.664660908 --supports-dual-gpus=false --gpu-driver-bug-workarounds=0,6,18 --gpu-vendor-id=0x8086 --gpu-device-id=0x0116 --gpu-driver-vendor=Mesa --gpu-driver-version=8.0.4
+benoni    3082  3078  0 37068  5284   2 02:53 ?        00:00:00 /usr/lib/chromium-browser/chromium-browser --type=gpu-process --channel=2892.10.664660908 --supports-dual-gpus=false --gpu-driver-bug-workarounds=0,6,18 --gpu-vendor-id=0x8086 --gpu-device-id=0x0116 --gpu-driver-vendor=Mesa --gpu-driver-version=8.0.4
+benoni    3125  2904  0 57561 41724   0 02:54 ?        00:00:03 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/PrerenderFromOmnibox/OmniboxPrerenderEnabled/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.13.715041558
+benoni    3138  2904  0 59477 51948   3 02:54 ?        00:01:34 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/PrerenderFromOmnibox/OmniboxPrerenderEnabled/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.15.869241693
+benoni    3175  2607  0 59338 17852   0 02:58 ?        00:01:01 /usr/bin/gnome-terminal -x byobu-launcher
+benoni    3183  3175  0   601   716   0 02:58 ?        00:00:00 gnome-pty-helper
+benoni    3184  3175  0   819  1000   3 02:58 pts/0    00:00:00 tmux -2 -f /usr/share/byobu/profiles/tmuxrc new-session /usr/bin/byobu-shell
+benoni    3206     1  0  1453  3752   1 02:58 ?        00:01:30 tmux -2 -f /usr/share/byobu/profiles/tmuxrc new-session /usr/bin/byobu-shell
+benoni    3207  3206  0   559   528   2 02:58 pts/1    00:00:00 sh -c /usr/bin/byobu-shell
+benoni    3211  3207  0  2199  5084   3 02:58 pts/1    00:00:01 /bin/bash
+benoni    5925     1  0  8438  2612   1 03:02 ?        00:00:00 /usr/lib/dconf/dconf-service
+benoni    8205     1  0  7829  1476   3 03:05 ?        00:00:04 adb -P 5037 fork-server server
+root      8826     2  0     0     0   3 07:25 ?        00:00:00 [kworker/u:9]
+root      8841     2  0     0     0   1 09:11 ?        00:00:00 [migration/1]
+root      8843     2  0     0     0   1 09:11 ?        00:00:00 [ksoftirqd/1]
+root      8844     2  0     0     0   1 09:11 ?        00:00:00 [watchdog/1]
+root      8845     2  0     0     0   2 09:11 ?        00:00:00 [migration/2]
+root      8847     2  0     0     0   2 09:11 ?        00:00:00 [ksoftirqd/2]
+root      8848     2  0     0     0   2 09:11 ?        00:00:00 [watchdog/2]
+root      8849     2  0     0     0   3 09:11 ?        00:00:00 [migration/3]
+root      8851     2  0     0     0   3 09:11 ?        00:00:00 [ksoftirqd/3]
+root      8852     2  0     0     0   3 09:11 ?        00:00:00 [watchdog/3]
+root      8853     2  0     0     0   1 09:11 ?        00:00:00 [irq/44-mei]
+root      8873     2  0     0     0   1 09:11 ?        00:00:01 [kworker/1:0]
+root      8875     2  0     0     0   2 09:11 ?        00:00:01 [kworker/2:0]
+root      8889   647  0   814  1248   3 09:11 ?        00:00:00 /sbin/udevd --daemon
+root      8890   647  0   814  1032   2 09:11 ?        00:00:00 /sbin/udevd --daemon
+root      9208     2  0     0     0   1 09:11 ?        00:00:00 [scsi_eh_6]
+root      9215     2  0     0     0   0 09:11 ?        00:00:00 [usb-storage]
+root      9254     2  0     0     0   0 09:12 ?        00:00:00 [hci0]
+root      9296  1035  0   732  1292   3 09:12 ?        00:00:00 /sbin/dhclient -d -4 -sf /usr/lib/NetworkManager/nm-dhcp-client.action -pf /var/run/sendsigs.omit.d/network-manager.dhclient-wlan0.pid -lf /var/lib/dhcp/dhclient-81325390-00bc-48da-a45c-26d92d40005f-wlan0.lease -cf /var/run/nm-dhclient-wlan0.conf wlan0
+postfix   9411  2025  0  1162  1332   3 09:12 ?        00:00:00 qmgr -l -t fifo -u
+postfix   9412  2025  0  1150  1308   0 09:12 ?        00:00:00 pickup -l -t fifo -u -c
+benoni   11150  2607  3 133248 149340 2 09:14 ?        00:01:00 skype
+root     11881     2  0     0     0   3 09:15 ?        00:00:00 [kworker/3:1]
+benoni   11921  2904  2 74601 113460  1 09:15 ?        00:00:40 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/PrerenderFromOmnibox/OmniboxPrerenderEnabled/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.39.1549803386
+benoni   16820  2904  0 55798 53544   0 03:55 ?        00:00:11 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/PrerenderFromOmnibox/OmniboxPrerenderEnabled/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.19.1688437014
+root     16889     2  0     0     0   0 09:22 ?        00:00:00 [kworker/0:0]
+benoni   17293  2632  0 42660 20688   0 09:22 ?        00:00:00 /opt/google/chrome/chrome --type=gpu-process --channel=2632.14.1054393462 --enable-crash-reporter=38F843059F24C3F509A2BD95DD99426B,Ubuntu 12.04.3 LTS --supports-dual-gpus=false --gpu-driver-bug-workarounds=0,8,22 --disable-accelerated-video-decode --gpu-vendor-id=0x8086 --gpu-device-id=0x0116 --gpu-driver-vendor=Mesa --gpu-driver-version=8.0.4 --enable-crash-reporter=38F843059F24C3F509A2BD95DD99426B,Ubuntu 12.04.3 LTS
+benoni   17307 17293  0 34807  4524   1 09:22 ?        00:00:00 /opt/google/chrome/chrome --type=gpu-process --channel=2632.14.1054393462 --enable-crash-reporter=38F843059F24C3F509A2BD95DD99426B,Ubuntu 12.04.3 LTS --supports-dual-gpus=false --gpu-driver-bug-workarounds=0,8,22 --disable-accelerated-video-decode --gpu-vendor-id=0x8086 --gpu-device-id=0x0116 --gpu-driver-vendor=Mesa --gpu-driver-version=8.0.4 --enable-crash-reporter=38F843059F24C3F509A2BD95DD99426B,Ubuntu 12.04.3 LTS
+benoni   17337     1  1 65265 48220   2 09:22 ?        00:00:14 gedit /home/benoni/Área de Trabalho/inbcpf
+benoni   17370     1  0 11243  4356   3 09:22 ?        00:00:00 /usr/bin/zeitgeist-daemon
+benoni   17388     1  0 12982  8020   0 09:22 ?        00:00:00 /usr/lib/zeitgeist/zeitgeist-fts
+benoni   17390     1  0 14069  6816   0 09:22 ?        00:00:03 zeitgeist-datahub
+benoni   17396 17388  0  1057   280   2 09:22 ?        00:00:00 /bin/cat
+benoni   19350     1  0  1095   832   1 09:25 ?        00:00:00 /home/benoni/Área de Trabalho/Link para eclipse
+benoni   19352 19350  3 401470 424896 3 09:25 ?        00:00:39 /usr/bin/java -XX:PermSize=512M -XX:MaxPermSize=512M -Xms256M -Xmx768M -XX:+UseParallelOldGC -XX:ParallelGCThreads=2 -XX:ThreadPriorityPolicy=1 -Xverify:none -jar /home/benoni/Downloads/eclipse (2)//plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar -os linux -ws gtk -arch x86 -launcher /home/benoni/Downloads/eclipse (2)/eclipse -name Eclipse --launcher.library /home/benoni/Downloads/eclipse (2)//plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.100.v20110505/eclipse_1407.so -startup /home/benoni/Downloads/eclipse (2)//plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar --launcher.overrideVmargs -exitdata 1248002 -vm /usr/bin/java -vmargs -XX:PermSize=512M -XX:MaxPermSize=512M -Xms256M -Xmx768M -XX:+UseParallelOldGC -XX:ParallelGCThreads=2 -XX:ThreadPriorityPolicy=1 -Xverify:none -jar /home/benoni/Downloads/eclipse (2)//plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar
+benoni   19797  2904  0 59096 64248   0 09:26 ?        00:00:08 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/PrerenderFromOmnibox/OmniboxPrerenderEnabled/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.43.1270907389
+root     24512     2  0     0     0   3 09:32 ?        00:00:00 [kworker/3:2]
+root     25078     2  0     0     0   0 09:33 ?        00:00:00 [kworker/0:1]
+root     25105     2  0     0     0   2 09:33 ?        00:00:00 [kworker/2:1]
+root     25110     2  0     0     0   1 09:33 ?        00:00:00 [kworker/1:1]
+benoni   25555  2904  0 58017 49428   2 04:07 ?        00:00:06 /usr/lib/chromium-browser/chromium-browser --type=renderer --lang=pt-BR --force-fieldtrials=ForceCompositingMode/disable/InfiniteCache/No/Prefetch/ContentPrefetchPrefetchOn/Prerender/PrerenderMulti/PrerenderFromOmnibox/OmniboxPrerenderEnabled/UMA-Session-Randomized-Uniformity-Trial-5-Percent/group_06/UMA-Uniformity-Trial-1-Percent/group_57/UMA-Uniformity-Trial-10-Percent/group_01/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_02/UMA-Uniformity-Trial-5-Percent/group_03/UMA-Uniformity-Trial-50-Percent/default/ --disable-accelerated-2d-canvas --disable-accelerated-video-decode --channel=2892.20.1204700252
+root     28871     2  0     0     0   0 09:38 ?        00:00:00 [kworker/0:2]
+root     28900     2  0     0     0   1 09:38 ?        00:00:00 [kworker/1:2]
+root     28904     2  0     0     0   3 09:38 ?        00:00:00 [kworker/3:0]
+root     29527     2  0     0     0   2 09:39 ?        00:00:00 [kworker/2:2]
+root     31519     2  0     0     0   2 09:42 ?        00:00:00 [kworker/u:0]
+benoni   32069  3211  0  1236  1152   3 09:43 pts/1    00:00:00 ps -A -F
