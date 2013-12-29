@@ -103,7 +103,9 @@ public class MainActivity extends ListActivity {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(getApplicationContext(),NovoPerfilActivity.class);
-				//i.putExtra("servidor", myParcelableObject);
+				Servidor s = new Servidor();
+				//s.setId(-1);
+				i.putExtra("servidor", s);
 				startActivity(i);
 
 			}

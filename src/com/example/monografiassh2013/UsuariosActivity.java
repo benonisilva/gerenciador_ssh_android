@@ -19,7 +19,7 @@ public class UsuariosActivity extends ListActivity {
 		Intent i = getIntent();
 		informacoes = (String[]) i.getStringArrayExtra("users");
 		//temp
-		FormataEntrada.FormataSaidaIfconfig(informacoes);
+		//FormataEntrada.FormataSaidaIfconfig(informacoes);
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 		        android.R.layout.simple_list_item_1, informacoes);

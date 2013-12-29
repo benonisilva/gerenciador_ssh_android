@@ -6,6 +6,7 @@ public class ConfirmAlert {
     public interface DialogReturn {
 
         void onDialogCompleted(boolean answer);
+        void onDialogCompleted2(boolean answer);
     }
 
     public void setListener(DialogReturn dialogReturn) {

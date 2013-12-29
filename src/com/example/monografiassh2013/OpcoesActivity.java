@@ -4,11 +4,15 @@ import com.example.monografiassh2013.bd.dao.Servidor;
 import com.example.monografiassh2013.conexao.Comandos;
 import com.example.monografiassh2013.conexao.ConfiguracaoConexao;
 import com.example.monografiassh2013.conexao.SSHClienteConexao;
+import com.example.monografiassh2013.utils.ConfirmAlert;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
@@ -18,9 +22,10 @@ import android.widget.Toast;
 /*
  * apresenta todas as opcoes de comandos
  */
-public class OpcoesActivity extends Activity {
+public class OpcoesActivity extends Activity implements ConfirmAlert.DialogReturn {
     private Servidor servidor;
 	public ProgressDialog myPd_ring;
+	private ConfirmAlert confirm;
 	
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,9 @@ public class OpcoesActivity extends Activity {
 		Button botaoDesligar = (Button) findViewById(R.id.btn_desligar);
 		botaoDesligar.setOnClickListener( ListenerBotaoDesligar());
 		
+		Button botaoReiniciar = (Button) findViewById(R.id.btn_reiniciar);
+		botaoReiniciar.setOnClickListener( ListenerBotaoReiniciar());
+		
 		//
 		
 		
@@ -61,6 +69,9 @@ public class OpcoesActivity extends Activity {
 		Log.i("port", String.valueOf(servidor.getPorta()));
 		
 		//myPd_ring =  (ProgressDialog) findViewById(R.id.progressBar1);
+		//alerta usado para confimar deletar
+		confirm = new ConfirmAlert();
+		confirm.setListener(this);
 	}
 	/*
 	 * botao que executa o comando usando a classe auxiliar Executestuff
@@ -235,8 +246,21 @@ public class OpcoesActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(getApplicationContext(),DesligarActivity.class);
-                startActivity(i);
+				_confirm(v.getContext(),"Certeza que vai desligar?");
+
+			}
+			
+		};
+	}
+	
+private View.OnClickListener ListenerBotaoReiniciar(){
+		
+		return new View.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+			Log.i("lister","clicked");
+				_confirmRe(v.getContext(),"Certeza que vai reiniciar?");
 
 			}
 			
@@ -283,10 +307,14 @@ public class OpcoesActivity extends Activity {
             try {
             	ssh.conecta(config);//conecta
             	String inf = ssh.exec(comando);//executa comando e devolve resultado
-            	Log.i(c, inf.split(sep)+"");//separa para apresentar como lista
+            	Log.i(c, inf.length()+"");//separa para apresentar como lista
             	//pequena gambiarra usada pois a activity Hardware nao recebe um comando 
             	if(c.equals("servidor")) {
             		i.putExtra(c, servidor);//enviar servidor para HardwareActivity
+            		//finish();
+            	}
+            	else if(c.equals("")) {
+            		
             	}
             	else {
             		i.putExtra(c, inf.split(sep)); //envia a lista do resultado de comando
@@ -324,6 +352,68 @@ public class OpcoesActivity extends Activity {
 
         }
 
+	}
+	
+	 /*
+     * metodo usado mostrar opçao de confirmação ao desligar um servidor	
+     */
+	private void _confirm(Context context, String msg) {
+		AlertDialog dialog = new AlertDialog.Builder(context).create();
+		dialog.setTitle(msg);
+		dialog.setMessage("Escolha Sim ou Não");
+		dialog.setCancelable(false);
+		dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Sim", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int buttonId) {
+				confirm.getListener().onDialogCompleted(true);
+			}
+		});
+		dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Não", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int buttonId) {
+				confirm.getListener().onDialogCompleted(false);
+			}
+		});
+		dialog.setIcon(android.R.drawable.ic_dialog_alert);
+		dialog.show();
+	}
+	
+	@Override
+	public void onDialogCompleted(boolean answer) {
+		Toast.makeText(OpcoesActivity.this, answer+"", Toast.LENGTH_LONG).show();
+		if(answer) {
+			Executestuff e = new Executestuff();
+			e.execute(null,Comandos.DESLIGA,"","");
+			//finish();
+			
+		}
+	}
+	@Override
+	public void onDialogCompleted2(boolean answer) {
+		// TODO Auto-generated method stub
+		Toast.makeText(OpcoesActivity.this, answer+"", Toast.LENGTH_LONG).show();
+		if(answer) {
+			Executestuff e = new Executestuff();
+			e.execute(null,Comandos.REINICIAR,"","");
+			//finish();
+			
+		}
+	}
+	private void _confirmRe(Context context, String msg) {
+		AlertDialog dialog = new AlertDialog.Builder(context).create();
+		dialog.setTitle(msg);
+		dialog.setMessage("Escolha Sim ou Não");
+		dialog.setCancelable(false);
+		dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Sim", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int buttonId) {
+				confirm.getListener().onDialogCompleted2(true);
+			}
+		});
+		dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Não", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int buttonId) {
+				confirm.getListener().onDialogCompleted2(false);
+			}
+		});
+		dialog.setIcon(android.R.drawable.ic_dialog_alert);
+		dialog.show();
 	}
 
 }

@@ -38,9 +38,11 @@ public class ConexaoDiretaActivity extends Activity implements ConfirmAlert.Dial
 		//botoes e textviews
 		Button botaoConectar = (Button) findViewById(R.id.btn_conectar);
 		Button botaoDeletar = (Button) findViewById(R.id.btn_deletar);
+		Button botaoEditar = (Button) findViewById(R.id.btn_editar);
 
 		botaoConectar.setOnClickListener( ListenerBotaoConectar());
 		botaoDeletar.setOnClickListener( ListenerBotaoDeletar());
+		botaoEditar.setOnClickListener( ListenerBotaoEditar());
 
 		txv_host = (TextView) findViewById(R.id.eTxtHost);
 		txv_user = (TextView) findViewById(R.id.etxt_usuario);
@@ -90,12 +92,19 @@ public class ConexaoDiretaActivity extends Activity implements ConfirmAlert.Dial
 		};
 	}
 	
+	
+	
 	private OnClickListener ListenerBotaoEditar() {
 		return new View.OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-               //_confirm(v.getContext());
+				Intent i = new Intent(getApplicationContext(),NovoPerfilActivity.class);
+				//Servidor s = new Servidor();
+				//s.setId(-1);
+				i.putExtra("servidor", servidor);
+				startActivity(i);
+				finish();
 				
 			}
 
@@ -190,7 +199,7 @@ public class ConexaoDiretaActivity extends Activity implements ConfirmAlert.Dial
 				result = "Sucesso";
 			} catch (Exception e) {
 				Log.i("ERROR",e.getClass()+" \n"+e.getLocalizedMessage());
-				result = e.getMessage()+" Erro ao conectar";
+				result = e.getMessage()+" Erro ao conectar\n";
 			}
 			Log.i("conectado ?", isOpen+"");
 			if(isOpen) {
@@ -239,6 +248,11 @@ public class ConexaoDiretaActivity extends Activity implements ConfirmAlert.Dial
 		// TODO Auto-generated method stub
 		super.finish();
 		datasource.close();
+	}
+	@Override
+	public void onDialogCompleted2(boolean answer) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

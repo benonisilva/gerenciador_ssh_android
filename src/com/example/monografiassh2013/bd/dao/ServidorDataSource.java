@@ -77,7 +77,14 @@ public class ServidorDataSource {
     cursor.close();
     return listaServidores;
   }
-
+  /*
+  public void updateServidor(Servidor servidor) {
+	    long id = servidor.getId();
+	    System.out.println("Servidor deleted with id: " + id);
+	    database.update(MySQLiteHelper.TABLE_SERVIDORES, MySQLiteHelper.COLUMN_ID
+	        + " = " + id, null);
+	  }*/
+  
   private Servidor cursorToServidor(Cursor cursor) {
     Servidor servidor = new Servidor();
     servidor.setId(cursor.getLong(0));
