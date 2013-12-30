@@ -42,13 +42,19 @@ public final class R {
         public static final int etxt_porta=0x7f080004;
         public static final int etxt_senha=0x7f080003;
         public static final int etxt_usuario=0x7f080002;
-        public static final int groupOrdenar=0x7f08001f;
-        public static final int groupPesquisar=0x7f080023;
-        public static final int itemOrdenar=0x7f080020;
-        public static final int itemPesquisar=0x7f080024;
-        public static final int itemPid=0x7f080022;
-        public static final int itemUser=0x7f080021;
+        public static final int groupOrdenar=0x7f08002b;
+        public static final int groupPesquisar=0x7f08002f;
+        public static final int itemOrdenar=0x7f08002c;
+        public static final int itemPesquisar=0x7f080030;
+        public static final int itemPid=0x7f08002e;
+        public static final int itemUser=0x7f08002d;
         public static final int linear_layout_btn=0x7f080010;
+        public static final int processo_user=0x7f08001f;
+        public static final int processo_user2=0x7f080020;
+        public static final int processo_user3=0x7f080021;
+        public static final int processo_user4=0x7f080022;
+        public static final int processo_user5=0x7f080023;
+        public static final int processos_list=0x7f08002a;
         public static final int scroll_lista_servidores=0x7f08000f;
         public static final int titulo_main_text=0x7f08000e;
         public static final int txt_Kerner=0x7f08001c;
@@ -61,6 +67,12 @@ public final class R {
         public static final int txt_so_titulo=0x7f08001b;
         public static final int txt_usuarios_titulo=0x7f08001e;
         public static final int txt_versao=0x7f08001d;
+        public static final int txv_p=0x7f080026;
+        public static final int txv_p2=0x7f080027;
+        public static final int txv_p3=0x7f080028;
+        public static final int txv_p4=0x7f080029;
+        public static final int txv_pid=0x7f080025;
+        public static final int user=0x7f080024;
     }
     public static final class layout {
         public static final int activity_conexao_direta=0x7f030000;
@@ -75,6 +87,9 @@ public final class R {
         public static final int activity_rede=0x7f030009;
         public static final int activity_so=0x7f03000a;
         public static final int activity_usuarios=0x7f03000b;
+        public static final int child_user=0x7f03000c;
+        public static final int grup_item_user=0x7f03000d;
+        public static final int processos_2=0x7f03000e;
     }
     public static final class menu {
         public static final int menu_processos=0x7f070000;

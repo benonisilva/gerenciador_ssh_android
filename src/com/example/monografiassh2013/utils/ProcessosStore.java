@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.util.Log;
 
 public class ProcessosStore {
 
 	private List<Processo> processos = new ArrayList<Processo>();
+	private Map<String,List<Processo>> map_processos_user = new HashMap<String, List<Processo>>();
 
 	public List<Processo> getProcessos() {
 		return processos;
@@ -54,6 +57,20 @@ public class ProcessosStore {
 		return  l;
 	}
 	
+	public void addUserProcess(Processo p) {
+		if(map_processos_user.containsKey(p.getUser())) {
+			map_processos_user.get(p.getUser()).add(p);
+		}
+		else {
+			ArrayList<Processo> array = new ArrayList<Processo>();
+			array.add(p);
+			map_processos_user.put(p.getUser(), array);
+		}
+	}
+	
+	public Map<String,List<Processo>> getListProcessos(){
+		return map_processos_user;
+	}
 	
 	
 }

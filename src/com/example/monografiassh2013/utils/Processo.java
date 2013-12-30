@@ -94,16 +94,16 @@ public class Processo{
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		//builder.append("Processo [pid=");
-		builder.append(user);
-		builder.append(" - ");
+		//builder.append(user);
+		//builder.append(" - ");
 		builder.append(pid);
-		builder.append(" - "); 
+		builder.append("     -     "); 
 		builder.append(cpu);
-		builder.append(" - ");
+		builder.append("     -     ");
 		builder.append(men);
-		builder.append(" - ");
+		builder.append("     -     ");
 		builder.append(time);
-		builder.append(" - ");
+		builder.append("     -     ");
 		builder.append("comando");
 		builder.append("\n");
 		return builder.toString();

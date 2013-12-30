@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+    
+    <TextView
+        android:id="@+id/processo_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="25dp" />
+ 
+    <TextView
+        android:id="@+id/processo_user2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/processo_user"
+        android:layout_marginRight="-50dp"
+         />
+    <TextView
+        android:id="@+id/processo_user3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/processo_user4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/processo_user5"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-50dp"
+        />
+    <TextView
+        android:id="@+id/processo_user5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="10dp" />
+    
+ 
+</RelativeLayout>

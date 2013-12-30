@@ -86,7 +86,7 @@ public class OpcoesActivity extends Activity implements ConfirmAlert.DialogRetur
 
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(getApplicationContext(),ProcessosActivity.class);
+				Intent i = new Intent(getApplicationContext(),ProcessosActivity2.class);
                 //v.getId();            
                 Executestuff e = new Executestuff();
                 e.execute(i,Comandos.LIST_PROCESSOS,"processos","\n");

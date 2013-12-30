@@ -53,7 +53,7 @@ public class ProcessosActivity extends ListActivity {
 		
 		
 		adapter = new ArrayAdapter<Processo>(this,
-		        android.R.layout.simple_list_item_1, processos.getProcessos());
+		        android.R.layout.simple_list_item_2, processos.getProcessos());
 		    setListAdapter(adapter);
 		
 	}
