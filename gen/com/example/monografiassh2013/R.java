@@ -24,37 +24,43 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int btn_conectar=0x7f070005;
-        public static final int btn_deletar=0x7f070006;
-        public static final int btn_desligar=0x7f070009;
-        public static final int btn_disco=0x7f07000c;
-        public static final int btn_editar=0x7f070007;
-        public static final int btn_hardware=0x7f070017;
-        public static final int btn_memoria=0x7f07000d;
-        public static final int btn_novo=0x7f070011;
-        public static final int btn_processo=0x7f070014;
-        public static final int btn_redes=0x7f070018;
-        public static final int btn_reiniciar=0x7f07000a;
-        public static final int btn_sistema=0x7f070016;
-        public static final int btn_usuarios=0x7f070015;
-        public static final int eTxtHost=0x7f070001;
-        public static final int etxt_nome_servidor=0x7f070012;
-        public static final int etxt_porta=0x7f070004;
-        public static final int etxt_senha=0x7f070003;
-        public static final int etxt_usuario=0x7f070002;
-        public static final int linear_layout_btn=0x7f070010;
-        public static final int scroll_lista_servidores=0x7f07000f;
-        public static final int titulo_main_text=0x7f07000e;
-        public static final int txt_Kerner=0x7f07001c;
-        public static final int txt_desligar_titulo=0x7f070008;
-        public static final int txt_hardware_titulo=0x7f07000b;
-        public static final int txt_novo_perfil=0x7f070000;
-        public static final int txt_opcoes=0x7f070013;
-        public static final int txt_processos_titulo=0x7f070019;
-        public static final int txt_rede_titulo=0x7f07001a;
-        public static final int txt_so_titulo=0x7f07001b;
-        public static final int txt_usuarios_titulo=0x7f07001e;
-        public static final int txt_versao=0x7f07001d;
+        public static final int btn_conectar=0x7f080005;
+        public static final int btn_deletar=0x7f080006;
+        public static final int btn_desligar=0x7f080009;
+        public static final int btn_disco=0x7f08000c;
+        public static final int btn_editar=0x7f080007;
+        public static final int btn_hardware=0x7f080017;
+        public static final int btn_memoria=0x7f08000d;
+        public static final int btn_novo=0x7f080011;
+        public static final int btn_processo=0x7f080014;
+        public static final int btn_redes=0x7f080018;
+        public static final int btn_reiniciar=0x7f08000a;
+        public static final int btn_sistema=0x7f080016;
+        public static final int btn_usuarios=0x7f080015;
+        public static final int eTxtHost=0x7f080001;
+        public static final int etxt_nome_servidor=0x7f080012;
+        public static final int etxt_porta=0x7f080004;
+        public static final int etxt_senha=0x7f080003;
+        public static final int etxt_usuario=0x7f080002;
+        public static final int groupOrdenar=0x7f08001f;
+        public static final int groupPesquisar=0x7f080023;
+        public static final int itemOrdenar=0x7f080020;
+        public static final int itemPesquisar=0x7f080024;
+        public static final int itemPid=0x7f080022;
+        public static final int itemUser=0x7f080021;
+        public static final int linear_layout_btn=0x7f080010;
+        public static final int scroll_lista_servidores=0x7f08000f;
+        public static final int titulo_main_text=0x7f08000e;
+        public static final int txt_Kerner=0x7f08001c;
+        public static final int txt_desligar_titulo=0x7f080008;
+        public static final int txt_hardware_titulo=0x7f08000b;
+        public static final int txt_novo_perfil=0x7f080000;
+        public static final int txt_opcoes=0x7f080013;
+        public static final int txt_processos_titulo=0x7f080019;
+        public static final int txt_rede_titulo=0x7f08001a;
+        public static final int txt_so_titulo=0x7f08001b;
+        public static final int txt_usuarios_titulo=0x7f08001e;
+        public static final int txt_versao=0x7f08001d;
     }
     public static final class layout {
         public static final int activity_conexao_direta=0x7f030000;
@@ -69,6 +75,9 @@ public final class R {
         public static final int activity_rede=0x7f030009;
         public static final int activity_so=0x7f03000a;
         public static final int activity_usuarios=0x7f03000b;
+    }
+    public static final class menu {
+        public static final int menu_processos=0x7f070000;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
