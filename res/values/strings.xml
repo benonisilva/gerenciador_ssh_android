@@ -9,13 +9,13 @@
     <string name="conectar">Conectar</string>
     <string name="mem">Memória</string>
     <string name="sis">Sistema</string>
-    <string name="hard">Hardwere</string>
+    <string name="hard">Hardware</string>
     <string name="user">Usuário</string>
     <string name="port">Porta</string>
     <string name="halt">Desligar</string>
     <string name="restart">Reiniciar</string>
     <string name="op">Escolha uma opção</string>
-    <string name="processo">Processo</string>
+    <string name="processo">Processos</string>
     <string name="redes">Redes</string>
     <string name="discos">Discos</string>
     <string name="lista">Lista</string>

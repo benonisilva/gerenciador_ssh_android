@@ -102,6 +102,7 @@ public class OpcoesActivity extends Activity implements ConfirmAlert.DialogRetur
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(getApplicationContext(),UsuariosActivity.class);
+				//i.putExtra("servidor", servidor);
                 //startActivity(i);
 				Executestuff e = new Executestuff();
                 e.execute(i,Comandos.LIST_USUARIOS,"users","\n");
@@ -175,9 +176,10 @@ public class OpcoesActivity extends Activity implements ConfirmAlert.DialogRetur
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(getApplicationContext(),HardwareActivity.class);
-                //startActivity(i);
-				Executestuff e = new Executestuff();
-                e.execute(i,Comandos.INFO_SISTEMA,"servidor","\t");
+                i.putExtra("servidor", servidor);
+				startActivity(i);
+				//Executestuff e = new Executestuff();
+                //e.execute(i,Comandos.INFO_SISTEMA,"servidor","\t");
 				
 				
 				/*
@@ -252,8 +254,7 @@ public class OpcoesActivity extends Activity implements ConfirmAlert.DialogRetur
 			
 		};
 	}
-	
-private View.OnClickListener ListenerBotaoReiniciar(){
+	private View.OnClickListener ListenerBotaoReiniciar(){
 		
 		return new View.OnClickListener(){
 
@@ -289,9 +290,6 @@ private View.OnClickListener ListenerBotaoReiniciar(){
 	 */
 	public class Executestuff extends AsyncTask<Object, String, String> {
           
-		
-		
-
 		@Override
 		protected String doInBackground(Object... arg0) {
             
@@ -314,13 +312,16 @@ private View.OnClickListener ListenerBotaoReiniciar(){
             		//finish();
             	}
             	else if(c.equals("")) {
-            		
+            		Log.i("desligar/reiniciar","ok");
             	}
             	else {
             		i.putExtra(c, inf.split(sep)); //envia a lista do resultado de comando
             	}
             	
-            	startActivity(i);
+            	if(!c.equals("")) {
+            		startActivity(i);
+            	}
+            	
             	//finish();
 			} catch (Exception e) {
                     _toastError(e.getMessage());

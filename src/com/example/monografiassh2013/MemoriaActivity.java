@@ -17,7 +17,7 @@ public class MemoriaActivity extends ListActivity {
 		Intent i = getIntent();
 		informacoes = (String[]) i.getStringArrayExtra("mem");
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-		        android.R.layout.simple_list_item_1, informacoes);
+		        android.R.layout.test_list_item, informacoes);
 		    setListAdapter(adapter);
 		
 	}

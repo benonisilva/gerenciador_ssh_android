@@ -15,5 +15,15 @@ public class FormataEntrada {
 		Log.i("sss", s[1].split("-")[0]);
 		
 		return s;
-	}	
+	}
+	
+public static String FormataSaidaComando(String s1) {
+		String s2=null;
+		if(s1!=null) {
+			s2=s1;
+		}
+		//Log.i("sss", s[1].split("-")[0]);
+		
+		return s2;
+	}
 }

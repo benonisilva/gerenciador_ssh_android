@@ -88,7 +88,7 @@ public class ProcessosActivity extends ListActivity {
 	      // TODO Auto-generated method stub
 	      
 		getMenuInflater().inflate(R.menu.menu_processos, menu);
-	    return super.onCreateOptionsMenu(menu);
+	    return true;	    		
 	    }
 	
 	@Override
@@ -118,6 +118,4 @@ public class ProcessosActivity extends ListActivity {
 	    }
 	}
 	
-
-
 }

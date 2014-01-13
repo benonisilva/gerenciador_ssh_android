@@ -1,10 +1,12 @@
 package com.example.monografiassh2013.utils;
 
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Processo{
-    // PID|USER|% CPU|% MEM|TIME|COMMAND
+    // PID |USER |% CPU |% MEM |TIME |COMMAND
 	private String pid,user,cpu,men,time,command;
+	
 
 	public Processo(String pid, String user, String cpu, String men,
 			String time, String command) {
@@ -108,6 +110,44 @@ public class Processo{
 		builder.append("\n");
 		return builder.toString();
 	}
-
 		
+	public static enum Order implements Comparator<Processo> {
+	     ByCpu() {
+	        public int compare(Processo lhs, Processo rhs) {
+	           int a = Double.compare(Double.parseDouble(lhs.getCpu()), Double.parseDouble(rhs.getCpu()));
+	        	return a;
+	        }
+	     },
+	     
+	     ByPid() {
+		        public int compare(Processo lhs, Processo rhs) {
+		           int a = (Integer.parseInt(lhs.getPid())- Integer.parseInt(rhs.getPid()));
+		        	return a;
+		        }
+		     },
+	     
+	     ByMem() {
+		        public int compare(Processo lhs, Processo rhs) {
+		           int a = Double.compare(Double.parseDouble(lhs.getMen()), Double.parseDouble(rhs.getMen()));
+		        	return a;
+		        }
+		     },
+	     
+	     ByComando() {
+	        public int compare(Processo lhs, Processo rhs) {
+	           // TODO: Should really use a collator.
+	           return lhs.getCommand().compareTo(rhs.getCommand());
+	        }
+	     };
+
+	     public abstract int compare(Processo lhs, Processo rhs);
+
+	     public Comparator<Processo> ascending() {
+	        return this;
+	     }
+
+	     public Comparator<Processo> descending() {
+	        return Collections.reverseOrder(this);
+	     }
+	  }
 }

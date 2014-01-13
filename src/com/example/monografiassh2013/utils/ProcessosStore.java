@@ -31,18 +31,20 @@ public class ProcessosStore {
 	            Processo p2 = (Processo) o2;  
 	            switch (f) {
 				case USER:
+					Log.i("processos order by user ",getListProcessos()+"");
 					return p1.getUser().compareTo(p2.getUser());
 					
 					//break;
                 
 				default:
-					return Integer.parseInt(p1.getPid())-Integer.parseInt(p2.getPid());
+					Log.i("processos order default ",getListProcessos()+"");
+					return Integer.parseInt(p2.getPid())-Integer.parseInt(p1.getPid());
 					//break;
 				}
 	             
 	        }  
 	    });  
-	    //Log.i("processos order",processos.toString());
+	    Log.i("processos order",getListProcessos()+"");
 		//return processos;
 	}
 

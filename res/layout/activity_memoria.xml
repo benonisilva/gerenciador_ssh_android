@@ -10,6 +10,16 @@
     tools:context=".MemoriaActivity" >
 	
 	
+     <TextView
+        android:id="@+id/txt_info_mem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/mem"
+        android:textAppearance="?android:attr/textAppearanceLarge"  />
+    
 	<ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"

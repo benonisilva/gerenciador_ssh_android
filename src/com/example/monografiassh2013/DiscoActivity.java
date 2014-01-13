@@ -27,7 +27,7 @@ public class DiscoActivity extends ListActivity {
 		informacoes = (String[]) i.getStringArrayExtra("discos"); // pega as informaçoes passadas pela Activty OpcoesActivity
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-		        android.R.layout.simple_list_item_1, informacoes);
+		        android.R.layout.test_list_item, informacoes);
 		    setListAdapter(adapter);
 	}
 

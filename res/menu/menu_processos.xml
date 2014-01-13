@@ -4,6 +4,8 @@
             <menu>
                 <item android:id="@+id/itemUser" android:title="User"/>
                 <item android:id="@+id/itemPid" android:title="Pid"/>
+                <item android:id="@+id/itemCpu" android:title="Cpu"/>
+                <item android:id="@+id/itemMem" android:title="Mem"/>
             </menu>
         </item>
     </group>

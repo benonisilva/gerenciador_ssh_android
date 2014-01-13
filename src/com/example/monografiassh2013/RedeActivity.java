@@ -20,11 +20,12 @@ public class RedeActivity extends ListActivity {
 		for(int j=0;j<informacoes.length;j++) {
 			if(informacoes[j].isEmpty()) {
 				Log.i("vazio",j+"");
+				informacoes[j]="\n\n";
 			}
 		}
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-		        android.R.layout.simple_list_item_1, informacoes);
+		        android.R.layout.test_list_item, informacoes);
 		    setListAdapter(adapter);
 		    Log.i("adpter len", adapter.getCount()+"");
 	}
