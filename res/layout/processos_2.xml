@@ -5,51 +5,53 @@
     tools:context=".ProcessosActivity2" >
 
  <LinearLayout
-     android:layout_width="match_parent"
+     android:layout_width="fill_parent"
      android:layout_height="match_parent"
      android:layout_alignParentRight="true"
-     android:orientation="horizontal"
-     android:padding="35dp" >
-
-    <TextView 
-        android:id="@+id/txv_pid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PID"/>
-    <TextView 
-        android:id="@+id/txv_p"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="7dp"
-        android:text="%CPU"/>
-    
-     <TextView 
-        android:id="@+id/txv_p2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="7dp"
-        android:text="%MEM"/>
+     android:layout_marginBottom="5dp"
+     android:layout_marginLeft="10dp"
+     android:layout_marginTop="15dp"
      
-      <TextView 
-        android:id="@+id/txv_p3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="7dp"
-        android:text="TEMPO"/>
-      
-       <TextView 
-        android:id="@+id/txv_p4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="7dp"
-        android:text="COMANDO"/>
-    
-    
-    </LinearLayout>
+     android:orientation="horizontal" >
+
+     <TextView
+         android:id="@+id/txv_pid"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="PID" />
+
+     <TextView
+         android:id="@+id/txv_p"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:layout_marginLeft="20dp"
+         android:text="%CPU" />
+
+     <TextView
+         android:id="@+id/txv_p2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:layout_marginLeft="17dp"
+         android:text="%MEM" />
+
+     <TextView
+         android:id="@+id/txv_p3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:layout_marginLeft="13dp"
+         android:text="TEMPO" />
+
+     <TextView
+         android:id="@+id/txv_p4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="23dp"
+         android:text="COMANDO" />
+
+ </LinearLayout>
     
     <ExpandableListView
         android:id="@+id/processos_list"

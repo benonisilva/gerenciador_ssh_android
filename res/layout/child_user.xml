@@ -10,38 +10,39 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:paddingLeft="25dp" />
+        />
  
     <TextView
         android:id="@+id/processo_user2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/processo_user"
-        android:layout_marginRight="-50dp"
+        android:layout_gravity="left"
+        android:layout_alignLeft="@+id/processo_user"
+        android:layout_marginLeft="53dp"
          />
     <TextView
         android:id="@+id/processo_user3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
+        android:layout_gravity="left"
+        android:layout_alignLeft="@+id/processo_user2"
+        android:layout_marginLeft="52dp"
         />
     <TextView
         android:id="@+id/processo_user4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/processo_user5"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="-50dp"
+        android:layout_gravity="left"
+        android:layout_alignLeft="@+id/processo_user3"
+        android:layout_marginLeft="60dp"
         />
     <TextView
         android:id="@+id/processo_user5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:paddingRight="10dp" />
+        android:layout_alignLeft="@+id/processo_user4"
+        android:layout_gravity="left"
+        android:layout_marginLeft="60dp" />
     
  
 </RelativeLayout>
