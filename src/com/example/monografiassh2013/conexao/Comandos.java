@@ -4,7 +4,7 @@ package com.example.monografiassh2013.conexao;
  * Comandos enviados ao servidor
  */
 public final class Comandos {
-	public static final String LIST_DISK = "fdisk  -l | awk '{ print $1 \" \" $2 \" \" $3 \" \" $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9 \" \" $10}'";
+	public static final String LIST_DISK = "fdisk  -l | grep dev | awk '{ print $1 \" \" $2 \" \" $3 \" \" $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9 \" \" $10}'";
 	public static final String LIST_PROCESSOS = "ps -aux |  awk '{print $1 \" \"$2 \" \"$3\" \" $4\" \" $10 \" \"$11}'";
 	public static final String LIST_USUARIOS = "who -a";
 	public static final String LIST_REDES = "/sbin/ifconfig";

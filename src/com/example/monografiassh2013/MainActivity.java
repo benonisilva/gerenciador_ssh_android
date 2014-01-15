@@ -44,8 +44,8 @@ public class MainActivity extends ListActivity {
 		//Definindo funcionalidade para o bot�o
 		botaoNovo.setOnClickListener( ListenerBotaoNovo());
 
-		Button botaoConectar = (Button) findViewById(R.id.btn_conectar);
-		botaoConectar.setOnClickListener( ListenerBotaoConectar());
+		//Button botaoConectar = (Button) findViewById(R.id.btn_conectar);
+		//botaoConectar.setOnClickListener( ListenerBotaoConectar());
 
 		//Gerar lista de bot�es com os perfis de servidores salvos 
 		//Button botaoExemplo = (Button) findViewById(R.id.btn_exemplo);
@@ -114,7 +114,7 @@ public class MainActivity extends ListActivity {
 	}
 	/*
 	 * mudar para "teste de conexao" talvez
-	 */
+	 
 	private View.OnClickListener ListenerBotaoConectar(){
 
 		return new View.OnClickListener(){
@@ -139,7 +139,7 @@ public class MainActivity extends ListActivity {
 			}
 
 		};
-	}
+	}*/
 
 	/*
 	public class Loadsomestuff extends AsyncTask<String, Integer, String> {

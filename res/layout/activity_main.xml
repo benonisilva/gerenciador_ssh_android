@@ -44,13 +44,6 @@
             android:layout_height="wrap_content"
             android:layout_weight=".50"
             android:text="@string/novo" />
-
-        <Button
-            android:id="@+id/btn_conectar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".50"
-            android:text="@string/conectar" />
     </LinearLayout>
 
 </RelativeLayout>
